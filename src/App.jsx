@@ -1,11 +1,20 @@
-import Footer from './components/Footer'
 import './App.css'
+import Header from './components/header'
+import Footer from './components/Footer'
+
 
 function App() {
-  
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   return (
-    <Footer />
+    <div className="App">
+      <Header cartCount={cart.length} toggleCart={toggleCart}/>
+      <Footer />
+    </div>
   )
 }
 

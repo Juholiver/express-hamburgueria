@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardapio {
+  padding: 40px 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title-cardapio {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff5733;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.subtitle-cardapio{
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #fffefe;
+}
+
+
+.product-list-container {
+  display: grid;
+  /* Cria 3 colunas de largura igual, com um espaço de 30px (gap) entre elas */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; /* Espaçamento entre os itens (horiz e vertical) */
+  justify-items: center; /* Centraliza os cards dentro de suas células */
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .product-list-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .product-list-container {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.sobre-nos {
+  background-color: #44444e;
+  padding: 40px 20px;
+  text-align: center; /* Mantém o título centralizado, se quiser */
+  display: grid; /* Define como grid para o novo layout */
+}
+
+/* Novo contêiner para alinhar imagem e texto lado a lado */
+.sobre-nos-content {
+  display: flex;
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  justify-content: center; /* Centraliza o conteúdo dentro da seção */
+  gap: 40px; /* Espaço entre a imagem e o bloco de texto */
+  max-width: 1000px; /* Limita a largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+.imagem-sobre-nos {
+  /* Remova o margin-left: 20px; e margin-bottom: 20px; originais */
+  width: 100%;
+  max-width: 400px; /* Reduza o max-width para que caiba ao lado do texto */
+  height: auto;
+  border-radius: 10px;
+  /* flex-shrink: 0; Impede que a imagem encolha demais em telas pequenas */
+}
+
+.sobre-nos-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff5733;
+  /* text-align: left; Se quiser alinhar o título à esquerda agora que está do lado da imagem */
+}
+
+.sobre-nos-text {
+  font-size: 1.2rem;
+  color: #fff;
+  /* Remova max-width: 800px; e margin: 0 auto; */
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Opcional: Adicione media queries para dispositivos móveis, onde eles devem empilhar verticalmente */
+@media (max-width: 768px) {
+  .sobre-nos-content {
+    flex-direction: column; /* Empilha a imagem e o texto um em cima do outro */
+    gap: 20px;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .sobre-nos-text, .sobre-nos-title {
+    text-align: center;
+  }
 }

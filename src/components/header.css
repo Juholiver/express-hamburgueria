@@ -1,0 +1,122 @@
+.header-hamburgueria {
+  background-color: #333; /* Fundo escuro */
+  color: #fff; /* Texto branco */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Alinha logo à esquerda e navegação à direita */
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative; /* Adicionado para o menu mobile */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-size: 2rem; /* Tamanho do emoji/logo */
+  margin-right: 10px;
+}
+
+.nome-loja {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ff5733; /* Cor de destaque (laranja) */
+}
+
+.header-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.header-nav ul li {
+  margin-left: 20px;
+}
+
+.header-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+  color: #000; /* Muda a cor ao passar o mouse */
+}
+
+.carrinho {
+  background-color: #ff5730; /* Cor de destaque para o carrinho */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none; /* Escondido por padrão em telas maiores */
+}
+
+.hamburger-menu {
+  display: none; /* Escondido por padrão */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Media Query para responsividade */
+@media (max-width: 768px) {
+  
+  /* 1. Mostra o botão de menu hambúrguer */
+  .menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 20; /* Fica acima do menu */
+  }
+
+  /* 2. Transforma o header-nav em um menu modal/drawer */
+  .header-nav {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh; /* Altura total da tela */
+    width: 250px; /* Largura do menu lateral */
+    background-color: #444; 
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Esconde o menu fora da tela por padrão */
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-out;
+    z-index: 15;
+  }
+
+  /* 3. Estilo quando o menu está ativo (aberto) */
+  .header-nav.is-active {
+    display: block;
+    transform: translateX(0); /* Desliza para dentro da tela */
+  }
+  
+  /* 4. Muda a lista de links para empilhar verticalmente */
+  .header-nav ul {
+    flex-direction: column; 
+    margin-top: 50px; /* Espaço para o botão de fechar lá em cima */
+  }
+  
+  .header-nav ul li {
+    margin: 15px 0;
+  }
+
+  /* 5. Estilo para o overlay (fundo escuro atrás do modal) */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+}
