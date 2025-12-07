@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import HeroSection from './components/HeroSection';
 import ProductCard from './components/ProductCard';
 import Footer from './components/Footer';
-import Cart from './components/Cart';
-import Header from './components/Header';
+import Cart from './components/Cart.';
+import Header from './components/Header.jsx';
 import './App.css'; 
 
 import BurguerClassic from './assets/img/BurguerClassic.jpg';

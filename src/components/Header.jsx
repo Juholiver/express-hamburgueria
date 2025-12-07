@@ -2,19 +2,16 @@ import React, { useState } from 'react';
 import './Header.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-interface HeaderProps {
-  cartCount: number;
-  toggleCart: () => void;
-}
 
-const Header: React.FC<HeaderProps> = ({ cartCount, toggleCart }) => {
+
+const Header = ({ cartCount, toggleCart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleCartClick = (e: React.MouseEvent) => {
+  const handleCartClick = (e) => {
     e.preventDefault();
     toggleCart();
     if (isMenuOpen) toggleMenu();
