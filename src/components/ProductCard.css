@@ -1,0 +1,84 @@
+.product-card {
+  border-radius: 10px;
+  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 15px;
+  background-color: #44444e;
+  transition: transform 0.2s;
+  
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  color: #ff5733;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0 0 15px 0;
+  height: 60px; /* Altura fixa para manter cards uniformes */
+  overflow: hidden;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5733; /* Cor de destaque */
+}
+
+.add-to-cart-button {
+  background-color: #ff5733; /* Cor verde para ação de sucesso */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%;
+    max-width: 400px; /* Evita que o card fique muito largo em telas de tablet em modo de 1 coluna */
+  }
+
+  .product-description {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+}
