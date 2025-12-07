@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.css'; // Importa o arquivo CSS
+import './Header.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 interface HeaderProps {
@@ -15,23 +15,22 @@ const Header: React.FC<HeaderProps> = ({ cartCount, toggleCart }) => {
   };
 
   const handleCartClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Previne a navegação para #carrinho
+    e.preventDefault();
     toggleCart();
-    if (isMenuOpen) {
-      toggleMenu(); // Fecha o menu de navegação se estiver aberto (mobile)
-    }
+    if (isMenuOpen) toggleMenu();
   };
 
   return (
     <header className="header-hamburgueria">
       <div className="logo-container">
-        {/* Você pode substituir este emoji por uma imagem <img> real do seu logo */}
         <span className="logo-icon">🍔</span>
         <h1 className="nome-loja">Burger Express</h1>
       </div>
+
       <button className="menu-toggle" onClick={toggleMenu} aria-label="Abrir Menu">
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
+
       <nav className={`header-nav ${isMenuOpen ? 'is-active' : ''}`}>
         <ul>
           <li><a href="#inicio" onClick={toggleMenu}>Início</a></li>
@@ -40,7 +39,8 @@ const Header: React.FC<HeaderProps> = ({ cartCount, toggleCart }) => {
           <li><a href="#carrinho" className="carrinho" onClick={handleCartClick}>🛒 ({cartCount})</a></li>
         </ul>
       </nav>
-      {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
+
+      {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu} />}
     </header>
   );
 };

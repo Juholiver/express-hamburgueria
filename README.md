@@ -15,10 +15,10 @@ Siga os passos abaixo para configurar e rodar o projeto em sua máquina local:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/Juholiver/express-hamburgueria
     cd Hamburgueria
     ```
-    *(Nota: Substitua `https://github.com/seu-usuario/seu-repositorio.git` pelo URL correto do seu repositório, se aplicável.)*
+   
 
 2.  **Instale as dependências:**
     ```bash

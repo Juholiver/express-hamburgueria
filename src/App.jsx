@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Header from './components/header';
 import HeroSection from './components/HeroSection';
 import ProductCard from './components/ProductCard';
 import Footer from './components/Footer';
-import Cart from './components/Cart'; 
+import Cart from './components/Cart';
+import Header from './components/Header';
 import './App.css'; 
 
 import BurguerClassic from './assets/img/BurguerClassic.jpg';
