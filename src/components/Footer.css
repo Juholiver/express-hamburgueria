@@ -1,0 +1,79 @@
+.site-footer {
+  background-color: #333; /* Fundo escuro principal */
+  color: #fff;
+  padding-top: 40px;
+  border-top: 4px solid #ff5733; /* Linha laranja de destaque */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  color: #ff5733; /* Títulos em laranja */
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+
+/* Estilo dos botões de redes sociais */
+.social-buttons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-buttons a:hover {
+  color: #ff5733; /* Muda para laranja ao passar o mouse */
+}
+
+/* Direitos Autorais */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  background-color: #222; /* Fundo ligeiramente mais escuro para o copyright */
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+  }
+
+  .social-buttons {
+    text-align: center;
+  }
+}
