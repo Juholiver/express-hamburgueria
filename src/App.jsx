@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/header'
 import Footer from './components/Footer'
+import HeroSection from './components/HeroSection'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header cartCount={cart.length} toggleCart={toggleCart}/>
+      <HeroSection />
       <Footer />
     </div>
   )
